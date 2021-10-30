@@ -1,0 +1,29 @@
+{% extends 'whatcanido/base.html' %}
+{% load static %}
+
+<div class="jumbotron bg">
+    {% block content %}
+    <div class="main-content container submitted">
+        <div class="heading heading-contribute">
+            THANKS FOR CONTRIBUTING
+        </div>
+        <div class="heading heading-submitted">
+            YOUR SUBMISSION IS UNDER REVIEW IT WILL BE LIVE ONCE WE VERIFY INFORMATION
+        </div>
+        <div class="img">
+            <img src="{% static 'images/check.png' %}" width="170px">
+        </div>
+        <div class="heading heading-contribute">
+            TILL THEN GO SAVE THE EARTH
+        </div>
+        <a href="{% url 'whatcanido:home' %}" style="text-decoration: none;">
+
+            <div class="btn-custom" style="width:fit-content"><span class="text-btn"
+                    style="font-family: 'Oswald'; padding: 18px;">GO TO
+                    HOME PAGE</span></div>
+        </a>
+
+
+    </div>
+    {% endblock %}
+</div>

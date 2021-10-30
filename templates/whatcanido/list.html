@@ -1,0 +1,25 @@
+{% extends 'whatcanido/base.html' %}
+{% load static %}
+<div class="jumbotron bg">
+    {% block content %}
+    <div class="main-content container">
+        <div class="heading">
+            Problems related to '{{t}}'
+        </div>
+        <div class="list-items">
+
+            {% for q in qs %}
+            <a href="{{ q.get_absolute_url }}">
+                <div class="list-item">{{q.name}}</div>
+            </a>
+            {% empty %}
+            <div class="list-item">No Results</div>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% endblock %}
+</div>
+<!-- <nav class="navbar px-5 py-3 accent btm-nav" style="justify-content: center;">
+    <h4 class="text-center text-white text-btm">Made with 🧡 on 🌎</h4>
+</nav> -->

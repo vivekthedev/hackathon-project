@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What can I do?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<div class="jumbotron" style="height:100vh;">
+    <nav class="navbar accent px-5 py-3">
+        <!-- Navbar content -->
+        <a class="navbar-brand" href="{% url 'whatcanido:home' %}">
+            <img src="{% static 'images/planet-earth.png' %}" width="40" height="40" class="d-inline-block align-top"
+                alt="">
+            <span class="logo-text"> What can I do?</span>
+        </a>
+        <div class="btn-grp">
+
+            <a href="{% url 'whatcanido:donate' %}">
+                <div class="btn-custom"> <span class="text-btn"> DONATE</span></div>
+            </a>
+            <a href="{% url 'whatcanido:contribute' %}">
+                <div class="btn-custom"><span class="text-btn">CONTRIBUTE</span></div>
+            </a>
+        </div>
+    </nav>
+    <div class="bg">
+
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</div>
+
+<body>
+
+</body>
+
+</html>

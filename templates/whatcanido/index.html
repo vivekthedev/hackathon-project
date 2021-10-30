@@ -1,0 +1,41 @@
+{% extends 'whatcanido/base.html' %}
+{% load static %}
+
+<div class="jumbotron">
+
+    {% block content %}
+    <div class=" hero-part">
+        <form class="search-form" action="{% url 'whatcanido:problem_list_search' %}" method="GET">
+            <input type="text" name="querry" placeholder="Search Here.." id="search-text">
+            <input type="submit" value="🔍" id="search-btn">
+        </form>
+        <div class="action-text">
+            Actionable ways in which you can save the earth.
+        </div>
+        <div class="action-group">
+            <a href="{% url 'whatcanido:problem_list_category' 'individual' %}">
+                <div class="btn btn-info text-white action-btn">Individual</div>
+            </a>
+            <a href="{% url 'whatcanido:problem_list_category' 'industries' %}">
+                <div class="btn btn-info text-white action-btn">Industries</div>
+            </a>
+            <a href="{% url 'whatcanido:problem_list_category' 'daily-life' %}">
+                <div class="btn btn-info text-white action-btn">Daily Life</div>
+            </a>
+            <a href="{% url 'whatcanido:problem_list_category' 'mass_appeal' %}">
+                <div class="btn btn-info text-white action-btn">Mass Appeal</div>
+            </a>
+            <a href="{% url 'whatcanido:problem_list_category' 'organization' %}">
+                <div class="btn btn-info text-white action-btn">Organization</div>
+            </a>
+            <a href="{% url 'whatcanido:problem_list_category' 'plant_a_tree' %}">
+                <div class="btn btn-info text-white action-btn">Plant a Tree</div>
+            </a>
+        </div>
+
+    </div>
+    <nav class="navbar px-5 py-3 accent" style="justify-content: center;">
+        <h4 class="text-center text-white text-btm">Made with 🧡 on 🌎</h4>
+    </nav>
+    {% endblock %}
+</div>

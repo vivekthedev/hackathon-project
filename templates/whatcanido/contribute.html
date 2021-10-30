@@ -1,0 +1,19 @@
+{% extends 'whatcanido/base.html' %}
+{% load static %}
+<div class="jumbotron">
+
+    {% block content %}
+    <div class="main-content container">
+        <div class="heading heading-contribute">
+            help others know more about environment problems
+        </div>
+        <form action="" method="post" class='form-flex'>
+            {% csrf_token %}
+            {{form.name}}
+            {{form.solution}}
+            {{form.category}}
+            <button type="submit" class="submit-btn" style="margin:20px">Submit for review</span></button>
+        </form>
+    </div>
+    {% endblock %}
+</div>

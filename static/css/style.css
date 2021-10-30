@@ -1,0 +1,330 @@
+
+
+@font-face {
+  font-family: 'Oswald Stencil';
+  src: url('../fonts/Oswald-Stencil.otf') format('ttf');
+}
+.bg{
+    width:100%;
+    height:100vh;
+    background-image:url('../images/blob-scene-haikei.svg');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;    
+}
+.hero-part{
+    height: 100%;
+    background-image: url("../images/kate-hliznitsova-07cy-bu-nOk-unsplash.jpg");
+    background-size: 100%;
+    background-position: center center;
+    display: grid;
+    grid-template-rows: 20% 10% 70%;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-content: center;
+    place-items: center;
+    filter: opacity(0.6);
+}
+
+.action-text{
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    font-size: 20pt;
+}
+
+.action-group{
+    grid-gap:6rem;
+    font-family: 'Josefin Sans';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+.action-btn{
+    width: 7em;
+    font-size: 2.1em;
+    height: 1.75em;
+    border: 0px solid black;
+    border-radius: 50px;
+    background-color: rgba(242,108,79, 0.8);
+    transition: 0.3s ease-in-out;
+}
+.action-btn:hover{
+    background-color: rgba(242,108,79, 1);
+    box-shadow: 0px 0px 10px 1px #2b2a2a;
+}
+.accent{
+    background-color: #183217;
+    background-image: url("../images/leaf pattern.png");
+    background-size: cover;
+    background-image: url("../images/leaf pattern.png");
+    background-size: 50%;
+}
+.navbar-brand{
+    font-family: 'Josefin Sans';
+    font-size: 20pt;
+    text-decoration: none;
+    color:white;
+}
+.btn-grp{
+    font-family: 'Roboto';
+    display: flex;
+    align-content: center;
+}
+.btn-custom{
+    width: 130px;
+    margin-right: 15px;
+    height: 40px;
+    padding: 0;
+    background-color: #c4df9b;
+    text-align: center;
+    color:#2b2a2a;
+    box-shadow: 0px 0px 20px 1px #e47b64;
+    border: 0 solid black;
+    border-radius: 50px;
+    
+    overflow: hidden;
+}
+.text-btn{
+    width: fit-content;
+    margin: auto;
+}
+#search-text{
+    width: 40vw;
+    padding: 1em;
+    background-color: #ddd8d8;
+    border: 0 solid black;
+    border-radius: 50px;   
+    outline:none;
+}
+#search-btn{
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    border: 0 solid black;
+    border-radius: 50px;   
+    background-color: #fa6f4f;
+    outline:none;
+}
+.logo-text{
+    text-transform: uppercase;
+    background-color: #183217;
+    padding: 5px;
+}
+.text-btm{
+    background-color: #183217;
+    padding: 5px;
+}
+
+/* Styles for Category Page */
+.heading{
+    font-size:4em ;
+    color:white;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+.list-item{
+    font-family: 'Oswald';
+    font-style: italic;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    width: 50vw;
+    color: white;
+    padding: 10px;
+    border: 0 solid black;
+    border-radius: 20px;
+    background-color: #2b2a2a;
+}
+
+.list-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btm-nav{
+    position: relative;
+    width: 100%;
+}
+
+/*Styles for Contribute Page*/
+
+.heading-contribute{
+font-size: 3em;    
+}
+textarea{
+    resize:none;
+}
+.form-flex{
+    display: flex;
+    flex-direction: column;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#problem-field, #solution-field, #impact-field{
+    background-color: #2b2a2a;
+    outline: none;
+    font-family: 'Tw Cen MT';
+    font-style: italic;
+    padding: 0.5em;
+    width: 35vw;
+    margin-bottom: 1em;
+    border: 0 solid black;
+    height: 20vh;
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.submit-btn{
+    width: fit-content;
+    padding: 10px;
+    border: 0 solid black;
+    border-radius: 20px;
+    background-color: #c4df9b;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 700;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    font-size: 1.7em;
+}
+
+.submit-btn:hover{
+    box-shadow: 0px 0px 21px 2px #183217;
+    transform-origin: left;
+    transform: scale(1.1);
+}
+
+/* Style for Donate Page*/
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: inherit;
+    align-items: stretch;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+/* Styles for Submitted Page */
+.heading-submitted{
+    font-size: 2em;
+}
+.submitted{
+    align-items: center;
+}
+
+@media screen and (min-width:1800px) {
+.action-group{
+    grid-gap:10rem;
+
+}
+.action-btn{
+
+    width: 10em;
+    font-size: 2.7em;
+    height: 2.4em;
+}
+.action-text{
+    font-size: 30pt;
+}
+#search-text{
+    width: 55vw;
+    padding: 1.5em;
+}
+#search-btn{
+    font-size: 1.5em;
+}
+.logo-text{
+    font-size: 2em;
+}
+.btn-custom{
+    width: 7em;
+}
+}
+
+@media screen and (max-width:1024px) {
+ .action-group{
+    grid-gap:1.2rem;
+}
+.list-item{
+    width: 70vw;
+}
+
+}
+
+@media screen and (max-width:800px) {
+ .action-group{
+    grid-gap:1.2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.hero-part{
+    background-size: cover;
+}
+.list-item{
+    font-size: smaller;
+}
+}
+
+@media screen and (max-width:680px) {
+ .action-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.action-btn{
+    font-size: 2em;
+}
+
+.action-text{
+    font-size: 1.5em;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.accent{
+    flex-direction: column;
+}
+.btn-custom{
+    width: 6em;
+}
+.list-items{
+    width: inherit;
+}
+.logo-text{
+    font-size: 1.2rem;
+}
+textarea{
+    width:80vw;
+}
+.bg{
+    height:unset;
+}
+textarea >.resize-field{
+    width:50vw;
+}
+}
+
